@@ -1,5 +1,5 @@
-
 import "bootstrap/dist/css/bootstrap.min.css"
+import { useState } from "react";
 import MovieList from "./components/MovieList";
 function App() {
   const [movies, setMovies] = useState([
