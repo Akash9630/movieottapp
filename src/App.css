@@ -4,13 +4,47 @@ body {
   margin: 0;
   padding: 0;
 }
-
 .movie-app > .row {
   overflow-x: auto;
   flex-wrap: nowrap;
+  margin: 10px;
 }
-
 .image-container {
   position: relative;
-  transition: transform 0.2s;
+  transition: transform 0.1s;
+  width: 32%;
+}
+.image-container img {
+  border: solid green 5px;
+  min-height: 40%;
+}
+.image-container img:hover {
+  border: none;
+}
+.image-container:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+.overlay {
+  position: absolute;
+  background: rgba(56, 56, 56, 0.8);
+  transition: 0.5s ease;
+  opacity: 0;
+  bottom: 0;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  width: 80%;
+  height: 10%;
+  margin: 1px;
+}
+.addicon span {
+  padding-right: 10px;
+}
+.removeicon span {
+  padding-right: 10px;
 }

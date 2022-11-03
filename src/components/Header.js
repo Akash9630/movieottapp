@@ -1,6 +1,6 @@
-const Header = (props) => (
+const Header = ({ heading }) => (
     <div className="col">
-        <h1>{props.heading}</h1>
+        <h1>{heading}</h1>
     </div>
 )
 export default Header
