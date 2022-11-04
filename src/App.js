@@ -1,11 +1,12 @@
-import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect, useState } from "react";
+import "./App.css";
+import AddFavouriteIcon from "./components/AddFavouriteIcon";
 import Header from "./components/Header";
 import MovieList from "./components/MovieList";
+import RemoveFavouriteIcon from "./components/RemoveFavouriteIcon";
 import SearchBox from "./components/SearchBox";
-import "./App.css"
-import AddFavourites from "./components/AddFavourites";
-import RemoveFavourite from "./components/RemoveFavourite";
+
 
 function App() {
   const [movies, setMovies] = useState([])
@@ -56,16 +57,16 @@ function App() {
   return (
     <div className="container-fluid movie-app">
       <div className="row d-flex align-items-center mt-4 mb-4">
-        <Header heading="Movies" />
+        <Header heading="OTTMovies" />
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
       </div>
-
       <div className="row">
         <MovieList
           movies={movies}
           handleFavourites={AddFavouriteMovie}
-          favouriteComponent={AddFavourites} />
+          favouriteComponentIcon={AddFavouriteIcon} />
       </div>
+      <hr />
       <div className="row d-flex align-items-center mt-4 mb-4">
         <Header heading="favourites" />
       </div>
@@ -73,24 +74,10 @@ function App() {
         <MovieList
           movies={favourites}
           handleFavourites={RemoveFavouriteMovie}
-          favouriteComponent={RemoveFavourite}
+          favouriteComponentIcon={RemoveFavouriteIcon}
         />
       </div>
     </div>
   );
 }
-
 export default App;
-
-
-// `http://www.omdbapi.com/?s=${searchValue}&apikey=4df45d13`
-
-
-
-// const url = `https://www.omdbapi.com/?i=tt3896198&apikey=4df45d13`
-
-// useEffect(() => {
-//   fetch(url)
-//     .then((res) => res.json())
-//     .then(result => setMovies(result.Search))
-// }, [url])

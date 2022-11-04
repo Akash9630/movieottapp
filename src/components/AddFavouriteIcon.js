@@ -1,4 +1,4 @@
-const AddFavourites = () => (
+const AddFavouriteIcon = () => (
     <div className="addicon">
         <span className="mr-2">Add to Favourites</span>
         <svg
@@ -16,4 +16,4 @@ const AddFavourites = () => (
 
     </div>
 )
-export default AddFavourites
+export default AddFavouriteIcon

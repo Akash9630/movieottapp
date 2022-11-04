@@ -1,4 +1,4 @@
-const RemoveFavourite = () => {
+const RemoveFavouriteIcon = () => {
     return (
         <div className="removeicon">
             <span className="mr-2">Remove from favourites</span>
@@ -15,4 +15,4 @@ const RemoveFavourite = () => {
         </div>
     )
 }
-export default RemoveFavourite
+export default RemoveFavouriteIcon
