@@ -3,8 +3,8 @@ const MovieList = (props) => {
     return (
         <>
             {
-                props.movies.map((movie) => (
-                    <div className="image-container d-flex justify-content-start" key={movie.id}>
+                props.movies.map((movie, index) => (
+                    <div className="image-container d-flex justify-content-start" key={index}>
                         <img src={movie.Poster} alt="not found" />
                         <div
                             onClick={() => props.handleFavourites(movie)}
